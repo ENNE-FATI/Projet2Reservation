@@ -44,7 +44,7 @@ En résumé, cette application vise à améliorer l’expérience de réservatio
 ---
 ## Diagramme de classe
 
-![Diagramme de classe ](images/diagrameClasse.png)
+![Diagramme de classe ](src\java\images/DiagrameClasse.PNG)
 
 ## Modèle conceptuel de la base généré
-![La base de données ](images/Conception.png)
+![La base de données ](src\java\images/Conception.PNG)
