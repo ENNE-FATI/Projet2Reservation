@@ -1,7 +1,7 @@
 "# Projet2Reservation" 
 # 🌍 Plateforme de Réservation d'Activités Touristiques
 
-ne application web interactive pour permettre aux touristes de consulter, réserver et suivre des activités touristiques — tout en offrant aux organisateurs un aperçu statistique des tendances de réservation.
+Une application web interactive pour permettre aux touristes de consulter, réserver et suivre des activités touristiques — tout en offrant aux organisateurs un aperçu statistique des tendances de réservation.
 
 ---
 
