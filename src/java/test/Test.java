@@ -74,12 +74,8 @@ public class Test {
         System.out.println("\nActivités gérées par les Guides :");
         for (Guide g : guideDao.findAll()) {
             System.out.println("\nGuide: " + g.getNom() + " " + g.getPrenom() + " (Langue: " + g.getLangue() + ")");
-            System.out.println("Activités gérées:");
-            for (ActiviteTouristique activite : g.getActivites()) {
-                System.out.println(activite.getNom() + " - " + activite.getLieu());
-            }
-        }
-
+           }
+        
         System.out.println("\nListe des Administrateurs :");
         for (Admin admin : adminDao.findAll()) {
             System.out.println(admin.getNom() + " " + admin.getPrenom() + " (Email: " + admin.getEmail() + ")");
