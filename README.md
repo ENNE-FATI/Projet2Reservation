@@ -44,7 +44,7 @@ En résumé, cette application vise à améliorer l’expérience de réservatio
 ---
 ## Diagramme de classe
 
-![Diagramme de classe ](src\java\images/DiagrameClasse.PNG)
+![Diagramme de classe ](https://github.com/ENNE-FATI/Projet2Reservation/blob/main/src/java/images/DiagrameClasse.PNG)
 
 ## Modèle conceptuel de la base généré
 ![La base de données ](src\java\images/Conception.PNG)
