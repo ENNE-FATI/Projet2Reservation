@@ -48,3 +48,12 @@ En résumé, cette application vise à améliorer l’expérience de réservatio
 
 ## Modèle conceptuel de la base généré
 ![La base de données ](src\java\images/Conception.PNG)
+
+## Exécution des tests dans la console
+![La création des tables ](images/Tables.png)
+![Ajout de clés étrangères ](images/tablesss.png)
+![Insertion des données dans les tables](images/insert1.png)
+
+![Insertion des données dans les tables](images/insert2.png)
+![Selection des données dans les table](images/selection1.png)
+![Selection des données dans les table](images/selection2.png)
