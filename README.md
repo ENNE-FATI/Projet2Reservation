@@ -42,3 +42,9 @@ En résumé, cette application vise à améliorer l’expérience de réservatio
 - **Backend** : Java (Hibernate, Servlets)
 
 ---
+## Diagramme de classe
+
+![Diagramme de classe ](images/diagrameClasse.png)
+
+## Modèle conceptuel de la base généré
+![La base de données ](images/Conception.png)
