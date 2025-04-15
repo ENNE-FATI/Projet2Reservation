@@ -7,6 +7,10 @@ package dao;
 
 
 import entities.Touriste;
+import java.util.List;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import util.HibernateUtil;
 
 /**
  *
@@ -17,5 +21,5 @@ public class TouristeDao extends AbstractDao<Touriste> {
     public TouristeDao() {
         super(Touriste.class);
     }
-
+    
 }

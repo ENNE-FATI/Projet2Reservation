@@ -14,12 +14,20 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import org.hibernate.annotations.NamedQueries;
+import org.hibernate.annotations.NamedQuery;
 
+@Entity
+@NamedQueries({
+    @NamedQuery(name = "findBetweenPrix", query = "from ActiviteTouristique where prix between :p1 and :p2"),
+ 
+})
 /**
  *
  * @author FATI
  */
-@Entity
+
+
 @Table(name = "activite_touristique")
 public class ActiviteTouristique {
 

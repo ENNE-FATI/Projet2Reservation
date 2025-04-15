@@ -6,8 +6,9 @@ import javax.persistence.Embeddable;
 
 @Embeddable
 public class ReservationActivityId implements Serializable {
-
-    private int ActiviteTouristiqueId;
+    
+    @Column(name = "activite_touriste_id")
+    private int activiteId;
 
     @Column(name = "touriste_id")
     private int touristeId;
@@ -15,17 +16,19 @@ public class ReservationActivityId implements Serializable {
     public ReservationActivityId() {
     }
 
-    public ReservationActivityId(int ActiviteTouristiqueId, int touristeId) {
-        this.ActiviteTouristiqueId = ActiviteTouristiqueId;
+    public ReservationActivityId(int activiteId, int touristeId) {
+        this.activiteId = activiteId;
         this.touristeId = touristeId;
     }
 
+   
+
     public int getActiviteTouristiqueId() {
-        return ActiviteTouristiqueId;
+        return activiteId;
     }
 
     public void setActiviteTouristiqueId(int ActiviteTouristiqueId) {
-        this.ActiviteTouristiqueId = ActiviteTouristiqueId;
+        this.activiteId = ActiviteTouristiqueId;
     }
 
     public int getTouristeId() {
@@ -47,7 +50,7 @@ public class ReservationActivityId implements Serializable {
 
         ReservationActivityId that = (ReservationActivityId) o;
 
-        if (ActiviteTouristiqueId != that.ActiviteTouristiqueId) {
+        if (activiteId != that.activiteId) {
             return false;
         }
         return touristeId == that.touristeId;
@@ -55,7 +58,7 @@ public class ReservationActivityId implements Serializable {
 
     @Override
     public int hashCode() {
-        int result = ActiviteTouristiqueId;
+        int result = activiteId;
         result = 31 * result + touristeId;
         return result;
     }

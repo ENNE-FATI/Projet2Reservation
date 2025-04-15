@@ -8,12 +8,17 @@ package entities;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import org.hibernate.annotations.NamedQueries;
+import org.hibernate.annotations.NamedQuery;
 
 /**
  *
  * @author FATI
  */
 @Entity
+@NamedQueries({
+    @NamedQuery(name  ="findByTouriste", query = "from Touriste where nom =:nom")
+})
 public class Touriste extends User {
    
    @OneToMany(mappedBy = "touriste")
