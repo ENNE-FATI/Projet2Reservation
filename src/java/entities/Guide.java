@@ -5,6 +5,15 @@ import java.util.List;
 
 @Entity
 @Table(name = "guides")
+@NamedNativeQueries({
+    @NamedNativeQuery(
+        name = "findGuidesWithActivities",
+        query = "SELECT g.* FROM guides g " +
+                "JOIN activite_touristique a ON g.id = a.guide_id",
+        resultClass = Guide.class
+    )
+})
+
 public class Guide extends User {
 
     private String langue;
