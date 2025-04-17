@@ -16,8 +16,8 @@ import org.hibernate.annotations.NamedQuery;
  * @author FATI
  */
 @Entity
-@NamedQueries({
-    @NamedQuery(name  ="findByTouriste", query = "from Touriste where nom =:nom")
+@NamedQueries({  
+    @NamedQuery(name = "findByEmail", query = "from Touriste where email = :email")
 })
 public class Touriste extends User {
    
@@ -26,7 +26,6 @@ private List<ReservationActivity> reservations;
 
     public Touriste() {
     }
-
 
     public Touriste(String nom, String prenom, String email, String motDePasse) {
         super(nom, prenom, email, motDePasse);

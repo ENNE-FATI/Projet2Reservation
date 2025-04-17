@@ -16,9 +16,8 @@ import java.util.List;
 public class TestActivity {
    public static void main(String[] args) {
     ActivityTouristeDao ad = new ActivityTouristeDao();
-    List<ActiviteTouristique> list = ad.findBetweenPrix(200.0, 600.0);
+    List<ActiviteTouristique> list = ad.findBetweenPrix(200.0, 700.0);
 
-  
         for (ActiviteTouristique at : list) {
             System.out.println(at.getNom());
         }

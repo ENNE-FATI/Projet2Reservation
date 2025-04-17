@@ -19,8 +19,7 @@ import org.hibernate.annotations.NamedQuery;
 
 @Entity
 @NamedQueries({
-    @NamedQuery(name = "findBetweenPrix", query = "from ActiviteTouristique where prix between :p1 and :p2"),
- 
+    @NamedQuery(name = "findBetweenPrix", query = "from ActiviteTouristique where prix between :p1 and :p2")
 })
 /**
  *
@@ -48,12 +47,16 @@ public class ActiviteTouristique {
     public ActiviteTouristique() {
     }
 
-    public ActiviteTouristique(String nom, String lieu, double prix, String description) {
+    public ActiviteTouristique(String nom, String lieu, double prix, String description, Guide guide) {
         this.nom = nom;
         this.lieu = lieu;
         this.prix = prix;
         this.description = description;
+        this.guide = guide;
     }
+
+ 
+  
 
     public int getId() {
         return id;

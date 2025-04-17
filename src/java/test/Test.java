@@ -28,24 +28,24 @@ public class Test {
         userDao.create(t1);
         userDao.create(t2);
 
-        Guide g1 = new Guide("Français", "EN-NESYRY", "Fatima Zahra", "ennesyryfati@gmail.com", "Fati123");
+        Guide g1 = new Guide("Français", "EN-NESYRY", "Fatima ", "ennesyryfati@gmail.com", "Fati123");
         Guide g2 = new Guide("Arabe", "NACIRI", "Soukaina", "naciri@gmail.com", "Soukaina123");
         Guide g3 = new Guide("Anglais", "Souha", "Lina", "lina@gmail.com", "lina123");
         userDao.create(g1);
         userDao.create(g2);
         userDao.create(g3);
 
-        ActiviteTouristique a1 = new ActiviteTouristique("Surf", "Taghazout", 300.0f, "Cours de surf pour débutants et confirmés");
-        ActiviteTouristique a2 = new ActiviteTouristique("Quad", "Ennakhil", 250.0f, "Une heure de Quad");
-        ActiviteTouristique a3 = new ActiviteTouristique("Équitation", "Essaouira", 600.0f, "Tour à la plage avec photographe");
-        ActiviteTouristique a4 = new ActiviteTouristique("Visite des monuments historiques", "Marrakech", 50.0f, "Découverte de l'architecture marocaine");
+        ActiviteTouristique a1 = new ActiviteTouristique("Surf", "Taghazout", 300.0f, "Cours de surf pour débutants et confirmés",g1);
+        ActiviteTouristique a2 = new ActiviteTouristique("Quad", "Ennakhil", 250.0f, "Une heure de Quad",g2);
+        ActiviteTouristique a3 = new ActiviteTouristique("Équitation", "Essaouira", 600.0f, "Tour à la plage avec photographe",g1);
+        ActiviteTouristique a4 = new ActiviteTouristique("Visite des monuments historiques", "Marrakech", 50.0f, "Découverte de l'architecture marocaine",g2);
         activiteDao.create(a1);
         activiteDao.create(a2);
         activiteDao.create(a3);
         activiteDao.create(a4);
 
-        ReservationActivity res1 = new ReservationActivity(a1, t1, LocalDate.of(2025, 4, 15));  // Fatima Zahra - Surf
-        ReservationActivity res2 = new ReservationActivity(a2, t2, LocalDate.of(2025, 4, 16));  // John Swift - Quad
+        ReservationActivity res1 = new ReservationActivity(a1, t1, LocalDate.of(2025, 4, 15));  
+        ReservationActivity res2 = new ReservationActivity(a2, t2, LocalDate.of(2025, 4, 16));  
 
         reservationDao.create(res1);
         reservationDao.create(res2);
@@ -63,7 +63,7 @@ public class Test {
                 System.out.println(g.getNom() + " " + g.getPrenom() + " (Langue: " + g.getLangue() + ")");
             }
         }
-
+        
         System.out.println("\nRéservations de Fatima Zahra :");
         for (ReservationActivity res : reservationDao.findAll()) {
             if (res.getTouriste().getId() == t1.getId()) {

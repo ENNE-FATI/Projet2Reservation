@@ -4,7 +4,14 @@ import java.time.LocalDate;
 import javax.persistence.*;
 
 @Entity
+@NamedQueries({
+    @NamedQuery(
+        name = "findNamesByDate",
+        query = "SELECT r.touriste.nom, r.activite.nom FROM ReservationActivity r WHERE r.reservationDate = :date"
+    )
+})
 @Table(name = "reservations")
+
 public class ReservationActivity {
 
     @EmbeddedId
@@ -25,10 +32,12 @@ public class ReservationActivity {
     }
 
     public ReservationActivity(ActiviteTouristique activite, Touriste touriste, LocalDate reservationDate) {
-        this.activite = activite;
-        this.touriste = touriste;
-        this.reservationDate = reservationDate;
-    }
+    this.activite = activite;
+    this.touriste = touriste;
+    this.reservationDate = reservationDate;
+    this.id = new ReservationActivityId(activite.getId(), touriste.getId());
+}
+
 
     public ReservationActivityId getId() {
         return id;
