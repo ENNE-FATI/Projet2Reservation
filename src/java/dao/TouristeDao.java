@@ -54,9 +54,7 @@ public class TouristeDao extends AbstractDao<Touriste> {
         try {
             session = HibernateUtil.getSessionFactory().openSession();
             tx = session.beginTransaction();
-            touriste = (Touriste) session.getNamedQuery("findByEmail")
-                    .setParameter("email", email)
-                    .uniqueResult();
+            touriste = (Touriste) session.getNamedQuery("findByEmail").setParameter("email", email).uniqueResult();
             tx.commit();
         } catch (Exception ex) {
             if (tx != null) {
